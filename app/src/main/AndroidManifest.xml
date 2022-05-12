@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PmtApp">
         <activity
+            android:name=".TextActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
