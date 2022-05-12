@@ -40,8 +40,8 @@
 
     <TextView
         android:id="@+id/preview_text"
-        android:layout_width="317dp"
-        android:layout_height="98dp"
+        android:layout_width="309dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="77dp"
         android:text="This is a preview of how the text will look like."
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
@@ -55,16 +55,16 @@
         android:id="@+id/change_settings_title"
         android:layout_width="328dp"
         android:layout_height="59dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="21dp"
         android:gravity="center_horizontal"
         android:text="Change the settings"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/colour_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helpButton" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/helpButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">PmtApp</string>
+    <string-array name="fonts">
+        <item>Helvetica</item>
+        <item>Calibri</item>
+        <item>Futura</item>
+        <item>Garamond</item>
+        <item>Times New Roman</item>
+        <item>Arial</item>
+    </string-array>
 </resources>
