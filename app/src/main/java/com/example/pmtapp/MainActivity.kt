@@ -11,9 +11,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val text_button: Button = findViewById<Button>(R.id.text_button)
-        text_button.setOnClickListener {
+        val textButton: Button = findViewById<Button>(R.id.text_button)
+        textButton.setOnClickListener {
             val intent = Intent(this, TextActivity::class.java).apply{}
+            ContextCompat.startActivity(this, intent, null)
+        }
+
+        val colourButton: Button = findViewById<Button>(R.id.colour_button)
+        colourButton.setOnClickListener {
+            val intent = Intent(this, ColourActivity::class.java).apply{}
+            ContextCompat.startActivity(this, intent, null)
+        }
+
+
+        val readButton: Button = findViewById<Button>(R.id.read_button)
+        readButton.setOnClickListener {
+            val intent = Intent(this, ReadActivity::class.java).apply{}
             ContextCompat.startActivity(this, intent, null)
         }
     }

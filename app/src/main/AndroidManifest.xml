@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PmtApp">
         <activity
+            android:name=".ReadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ColourActivity"
+            android:exported="false" />
+        <activity
             android:name=".TextActivity"
             android:exported="false" />
         <activity
