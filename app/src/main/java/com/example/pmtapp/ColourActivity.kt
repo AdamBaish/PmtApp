@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 
-class TextActivity : AppCompatActivity() {
+class ColourActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_text)
+        setContentView(R.layout.activity_colour)
 
-        val backButtonTextPage: ImageButton = findViewById<ImageButton>(R.id.backButtonTextPage)
-        backButtonTextPage.setOnClickListener {
+        val backButtonColourPage: ImageButton = findViewById<ImageButton>(R.id.backButtonColourPage)
+        backButtonColourPage.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java).apply{}
             ContextCompat.startActivity(this, intent, null)
         }
