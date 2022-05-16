@@ -56,7 +56,7 @@ class UserCreation : AppCompatActivity() {
         try {
             val fileOutputStream: FileOutputStream = openFileOutput("$userName.txt", Context.MODE_PRIVATE)
             val outputWriter = OutputStreamWriter(fileOutputStream)
-            outputWriter.write("$userName,$age,$gender")
+            outputWriter.write("$userName\n$age$gender")
             outputWriter.close()
             //display file saved message
             Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
