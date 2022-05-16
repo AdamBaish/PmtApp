@@ -18,5 +18,11 @@ class UserSelectionActivity : AppCompatActivity() {
             val intent = Intent(this, UserCreation::class.java).apply{}
             ContextCompat.startActivity(this, intent, null)
         }
+
+        val tempbutton: Button = findViewById<Button>(R.id.tempbutton)
+        tempbutton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply{}
+            ContextCompat.startActivity(this, intent, null)
+        }
     }
 }
