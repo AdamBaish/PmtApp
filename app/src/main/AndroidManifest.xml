@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PmtApp">
         <activity
+            android:name=".UserCreation"
+            android:exported="false" />
+        <activity
+            android:name=".UserSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReadActivity"
             android:exported="false" />
         <activity
