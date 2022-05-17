@@ -2,12 +2,11 @@ package com.example.pmtapp
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import java.io.File
 import java.io.FileOutputStream
@@ -54,10 +53,19 @@ class UserCreation : AppCompatActivity() {
      */
     private fun createNewProfile(userName: String, age: Int, gender: String): Boolean {
         try {
-            val fileOutputStream: FileOutputStream = openFileOutput("$userName.txt", Context.MODE_PRIVATE)
-            val outputWriter = OutputStreamWriter(fileOutputStream)
-            outputWriter.write("$userName\n$age\n$gender")
-            outputWriter.close()
+            //find where to write the files to
+            val filePath: String = baseContext.filesDir.path.toString().toString()
+
+            //creates new profile with the information given
+            var profileFile = File("$filePath/$userName.txt")
+            profileFile.createNewFile()
+            profileFile.writeText("$userName\n$age\n$gender")
+
+            //creates a new file if it doesn't exist that saves the usernames
+            var usersFile = File("$filePath/users.txt")
+            usersFile.createNewFile()
+            usersFile.appendText("$userName,")
+
             //display file saved message
             Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
             return true

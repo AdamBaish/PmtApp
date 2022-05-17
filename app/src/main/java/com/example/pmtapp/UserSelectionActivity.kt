@@ -3,6 +3,7 @@ package com.example.pmtapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.core.content.ContextCompat
 import java.io.File
@@ -23,6 +24,15 @@ class UserSelectionActivity : AppCompatActivity() {
         tempbutton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java).apply{}
             ContextCompat.startActivity(this, intent, null)
+        }
+
+        val filePath: String = baseContext.filesDir.path.toString().toString() + "/users.txt"
+        var file = File(filePath)
+        if (file.exists()) {
+            var users = file.readLines()
+            Log.d("TAG", "$users")
+        }else{
+            Log.d("TAG", "file not found")
         }
     }
 }
