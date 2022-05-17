@@ -38,8 +38,22 @@ class UserSelectionActivity : AppCompatActivity() {
         }
 
         val UserButton1: Button = findViewById<Button>(R.id.UserButton1)
+        UserButton1.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", "1")}
+            ContextCompat.startActivity(this, intent, null)
+        }
+
         val UserButton2: Button = findViewById<Button>(R.id.UserButton2)
+        UserButton2.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", "2")}
+            ContextCompat.startActivity(this, intent, null)
+        }
+
         val UserButton3: Button = findViewById<Button>(R.id.UserButton3)
+        UserButton3.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", "3")}
+            ContextCompat.startActivity(this, intent, null)
+        }
 
         val filePath: String = baseContext.filesDir.path.toString().toString() + "/users.txt"
         var file = File(filePath)
