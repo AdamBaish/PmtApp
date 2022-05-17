@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         val readButton: Button = findViewById<Button>(R.id.read_button)
         readButton.setOnClickListener {
             val intent = Intent(this, ReadActivity::class.java).apply{}
+            ContextCompat.startActivity(this, intent, null)
+        }
+
+        val backButtonMainPage: ImageButton = findViewById<ImageButton>(R.id.backButtonMainPage)
+        backButtonMainPage.setOnClickListener {
+            val intent = Intent(this, UserSelectionActivity::class.java).apply{}
             ContextCompat.startActivity(this, intent, null)
         }
     }
