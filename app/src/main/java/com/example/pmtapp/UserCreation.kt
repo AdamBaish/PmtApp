@@ -54,7 +54,7 @@ class UserCreation : AppCompatActivity() {
     private fun createNewProfile(userName: String, age: Int, gender: String): Boolean {
         try {
             //find where to write the files to
-            val filePath: String = baseContext.filesDir.path.toString().toString()
+            val filePath: String = baseContext.filesDir.path.toString()
 
             //creates new profile with the information given
             var profileFile = File("$filePath/$userName.txt")
