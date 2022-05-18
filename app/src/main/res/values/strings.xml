@@ -8,4 +8,5 @@
         <item>Times New Roman</item>
         <item>Arial</item>
     </string-array>
+    <string name="hyperlink"><a href="https://enchroma.co.uk/pages/colour-blind-test/">Take a Colour Blind Test!</a></string>
 </resources>
