@@ -59,7 +59,7 @@ class UserCreation : AppCompatActivity() {
             //creates new profile with the information given
             var profileFile = File("$filePath/$userName.txt")
             profileFile.createNewFile()
-            profileFile.writeText("$userName\n$age\n$gender\n20sp\ndefault")
+            profileFile.writeText("$userName\n$age\n$gender\n20\ndefault")
 
             //creates a new file if it doesn't exist that saves the usernames
             var usersFile = File("$filePath/users.txt")
