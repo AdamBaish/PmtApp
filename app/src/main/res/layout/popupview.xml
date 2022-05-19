@@ -5,7 +5,7 @@
     android:id="@+id/popup_view_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c7bf98"
+    android:background="@color/backGround"
     android:orientation="vertical"
     android:paddingLeft="40dp"
     android:paddingTop="60dp"
@@ -27,8 +27,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="50dp"
+        android:background="@color/backGround"
         android:paddingBottom="150dp"
-        android:background="#1282A2"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="40dp" />
 
@@ -37,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/hyperlink"
+        android:text="Colour blindness help"
         android:textSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,11 +47,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="In order to assist with colour impairment this feature provides you with the option of editing the colours on your phone providing you with a better colour experience"
+        android:text="In order to assist with colour impairment this feature provides you with the option of editing the colours on your phone providing you with a better colour experience \n \n \n We reccomend that users take a online colour blindness test for more clarification on what options to chose"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.199" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
