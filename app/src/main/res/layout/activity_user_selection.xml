@@ -7,6 +7,39 @@
     android:background="@color/backGround"
     tools:context=".UserSelectionActivity">
 
+    <Button
+        android:id="@+id/UserButton3"
+        android:layout_width="291dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:text="User3"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserButton2" />
+
+    <Button
+        android:id="@+id/UserButton2"
+        android:layout_width="291dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:text="Max"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UserButton1" />
+
+    <Button
+        android:id="@+id/UserButton1"
+        android:layout_width="291dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:text="Adam"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newUserButton" />
+
     <TextView
         android:id="@+id/WelcomeTitle"
         android:layout_width="291dp"
@@ -23,19 +56,33 @@
     <Button
         android:id="@+id/newUserButton"
         android:layout_width="291dp"
-        android:layout_height="78dp"
+        android:layout_height="70dp"
         android:layout_marginTop="28dp"
         android:text="New User "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/WelcomeTitle" />
 
+
     <Button
         android:id="@+id/tempbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="go to next screen"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="309dp" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:text="RESET"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
