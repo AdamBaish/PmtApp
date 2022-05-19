@@ -8,4 +8,13 @@
         <item>Times New Roman</item>
         <item>Arial</item>
     </string-array>
+    <string-array name="spinnerArray">
+        <item>8</item>
+        <item>10</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+    </string-array>
+    <string name="hyperlink"><a href="https://enchroma.co.uk/pages/colour-blind-test/">Take a Colour Blind Test!</a></string>
 </resources>

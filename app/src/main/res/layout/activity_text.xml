@@ -39,10 +39,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <SeekBar
-        android:id="@+id/fontSizeSlider"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="258dp"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -61,14 +61,4 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHeader" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="338dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="45dp"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fontSizeSlider" />
 </androidx.constraintlayout.widget.ConstraintLayout>
