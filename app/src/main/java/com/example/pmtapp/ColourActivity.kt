@@ -1,18 +1,14 @@
 package com.example.pmtapp
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import androidx.appcompat.app.AlertDialog
+import android.view.View
+import android.widget.*
 import androidx.core.content.ContextCompat
-import org.w3c.dom.Document
-import javax.xml.parsers.DocumentBuilder
-import javax.xml.parsers.DocumentBuilderFactory
 
 class ColourActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,11 +36,11 @@ class ColourActivity : AppCompatActivity() {
         }
 
        blueYellowCB.setOnClickListener{
-           imageView.setColorFilter(Color.rgb(125, 125, 125), PorterDuff.Mode.MULTIPLY)
+           imageView.setColorFilter(Color.argb(80, 125, 125, 125), PorterDuff.Mode.MULTIPLY)
        }
 
         helpButton.setOnClickListener{
-
+            setContentView(R.layout.popupview)
         }
 
     }
