@@ -16,40 +16,40 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val extras = intent.extras
+        var userName: String? = null
+
+        if (extras != null) {
+            userName = extras.getString("user")
+        }
+
         val textButton: Button = findViewById<Button>(R.id.text_button)
         textButton.setOnClickListener {
-            val intent = Intent(this, TextActivity::class.java).apply{}
+            val intent = Intent(this, TextActivity::class.java).apply{putExtra("user", userName)}
             ContextCompat.startActivity(this, intent, null)
         }
 
         val colourButton: Button = findViewById<Button>(R.id.colour_button)
         colourButton.setOnClickListener {
-            val intent = Intent(this, ColourActivity::class.java).apply{}
+            val intent = Intent(this, ColourActivity::class.java).apply{putExtra("user", userName)}
             ContextCompat.startActivity(this, intent, null)
         }
 
 
         val readButton: Button = findViewById<Button>(R.id.read_button)
         readButton.setOnClickListener {
-            val intent = Intent(this, ReadActivity::class.java).apply{}
+            val intent = Intent(this, ReadActivity::class.java).apply{putExtra("user", userName)}
             ContextCompat.startActivity(this, intent, null)
         }
 
         val backButtonMainPage: ImageButton = findViewById<ImageButton>(R.id.backButtonMainPage)
         backButtonMainPage.setOnClickListener {
-            val intent = Intent(this, UserSelectionActivity::class.java).apply{}
+            val intent = Intent(this, UserSelectionActivity::class.java).apply{putExtra("user", userName)}
             ContextCompat.startActivity(this, intent, null)
         }
 
-        val extras = intent.extras
-        var user: String? = null
-
-        if (extras != null) {
-            user = extras.getString("user")
-        }
-
         val filePath: String = baseContext.filesDir.path.toString()
-        var userDetailFile = File("$filePath/$user.txt")
+        var userDetailFile = File("$filePath/$userName.txt")
         if (userDetailFile.exists()) {
             var usersDetails = userDetailFile.readLines()
             if (usersDetails.isEmpty()){return}
