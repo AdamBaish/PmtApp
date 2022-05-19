@@ -52,13 +52,14 @@ class MainActivity : AppCompatActivity() {
         var userDetailFile = File("$filePath/$userName.txt")
         if (userDetailFile.exists()) {
             var usersDetails = userDetailFile.readLines()
+            Log.d("TAG", "$usersDetails")
             if (usersDetails.isEmpty()){return}
             var textSize = usersDetails[3]
             var textSizeFloat : Float = textSize.toFloat()
             val defultText : TextView = findViewById<TextView>(R.id.preview_text)
             defultText.textSize = textSizeFloat
         }else{
-            Log.d("TAG", "file not found")
+            Log.d("TAG", "$filePath/$userName.txt not found")
         }
     }
 }
