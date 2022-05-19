@@ -41,7 +41,11 @@ class ColourActivity : AppCompatActivity() {
 
         helpButton.setOnClickListener{
             setContentView(R.layout.popupview)
+            val popup_close_btn: Button = findViewById(R.id.popup_close_btn)
+            popup_close_btn.setOnClickListener{
+                val intent = Intent(this, ColourActivity::class.java).apply{}
+                ContextCompat.startActivity(this, intent, null)
+            }
         }
-
     }
 }

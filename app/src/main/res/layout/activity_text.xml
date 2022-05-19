@@ -7,6 +7,19 @@
     android:background="@color/backGround"
     tools:context=".TextActivity">
 
+    <TextView
+        android:id="@+id/preview_text_text_changer"
+        android:layout_width="309dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="77dp"
+        android:text="This is a preview of how the text will look like."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageButton
         android:id="@+id/helpButtonTextPage"
         android:layout_width="wrap_content"
@@ -61,4 +74,15 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textHeader" />
+
+    <Button
+        android:id="@+id/submitButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 </androidx.constraintlayout.widget.ConstraintLayout>

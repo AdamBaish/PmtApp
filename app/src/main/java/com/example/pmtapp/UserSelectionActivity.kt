@@ -31,27 +31,6 @@ class UserSelectionActivity : AppCompatActivity() {
             ContextCompat.startActivity(this, intent, null)
         }
 
-        val UserButton1: Button = findViewById<Button>(R.id.UserButton1)
-        var userName1=UserButton1.text
-        UserButton1.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", userName1)}
-            ContextCompat.startActivity(this, intent, null)
-        }
-
-        val UserButton2: Button = findViewById<Button>(R.id.UserButton2)
-        var userName2=UserButton2.text
-        UserButton2.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", userName2)}
-            ContextCompat.startActivity(this, intent, null)
-        }
-
-        val UserButton3: Button = findViewById<Button>(R.id.UserButton3)
-        var userName3=UserButton3.text
-        UserButton3.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", userName3)}
-            ContextCompat.startActivity(this, intent, null)
-        }
-
         val filePath: String = baseContext.filesDir.path.toString().toString() + "/users.txt"
         var file = File(filePath)
         if (file.exists()) {
@@ -65,14 +44,31 @@ class UserSelectionActivity : AppCompatActivity() {
                 count++
                 if (user != ""){
                     if (count == 1){
+                        val UserButton1: Button = findViewById<Button>(R.id.UserButton1)
+                        Log.d("TAGName", "$user")
+                        UserButton1.setOnClickListener {
+                            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", user)}
+                            ContextCompat.startActivity(this, intent, null)
+                        }
                         UserButton1.text = user
                         UserButton1.visibility = View.VISIBLE
                     }
                     if (count == 2){
+                        val UserButton2: Button = findViewById<Button>(R.id.UserButton2)
+                        UserButton2.setOnClickListener {
+                            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", user)}
+                            ContextCompat.startActivity(this, intent, null)
+                        }
                         UserButton2.text = user
                         UserButton2.visibility = View.VISIBLE
                     }
                     if (count == 3){
+                        val UserButton3: Button = findViewById<Button>(R.id.UserButton3)
+                        var userName3=UserButton3.text
+                        UserButton3.setOnClickListener {
+                            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", user)}
+                            ContextCompat.startActivity(this, intent, null)
+                        }
                         UserButton3.text = user
                         UserButton3.visibility = View.VISIBLE
                     }
