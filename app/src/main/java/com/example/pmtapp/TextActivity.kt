@@ -37,8 +37,6 @@ class TextActivity : AppCompatActivity() {
 
             spinner.adapter = adapter
         }
-
-
         val submitButtonText: Button = findViewById<Button>(R.id.submitButtonText)
         submitButtonText.setOnClickListener {
             var textSizeToEnter = spinner.selectedItem
@@ -70,7 +68,6 @@ class TextActivity : AppCompatActivity() {
             }
         }
 
-        //spinner.onItemSelectedListener =
         var textSizeToEnter = spinner.selectedItem
         val filePath: String = baseContext.filesDir.path.toString()
         var userDetailFile = File("$filePath/$user.txt")
