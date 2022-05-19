@@ -21,12 +21,6 @@ class UserSelectionActivity : AppCompatActivity() {
             ContextCompat.startActivity(this, intent, null)
         }
 
-        val tempbutton: Button = findViewById<Button>(R.id.tempbutton)
-        tempbutton.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{}
-            ContextCompat.startActivity(this, intent, null)
-        }
-
         val resetbutton: Button = findViewById<Button>(R.id.resetButton)
         resetbutton.setOnClickListener {
             val filePath: String = baseContext.filesDir.path.toString()
@@ -38,20 +32,23 @@ class UserSelectionActivity : AppCompatActivity() {
         }
 
         val UserButton1: Button = findViewById<Button>(R.id.UserButton1)
+        var userName1=UserButton1.text
         UserButton1.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", "1")}
+            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", userName1)}
             ContextCompat.startActivity(this, intent, null)
         }
 
         val UserButton2: Button = findViewById<Button>(R.id.UserButton2)
+        var userName2=UserButton2.text
         UserButton2.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", "2")}
+            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", userName2)}
             ContextCompat.startActivity(this, intent, null)
         }
 
         val UserButton3: Button = findViewById<Button>(R.id.UserButton3)
+        var userName3=UserButton3.text
         UserButton3.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", "3")}
+            val intent = Intent(this, MainActivity::class.java).apply{putExtra("user", userName3)}
             ContextCompat.startActivity(this, intent, null)
         }
 
