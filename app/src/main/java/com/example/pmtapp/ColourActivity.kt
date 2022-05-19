@@ -23,27 +23,35 @@ class ColourActivity : AppCompatActivity() {
         val helpButton: ImageButton = findViewById(R.id.helpButtonColourPage)
 
         backButtonColourPage.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{}
+            val intent = Intent(this, MainActivity::class.java).apply {}
             ContextCompat.startActivity(this, intent, null)
         }
 
-        defaultButton.setOnClickListener{
+        defaultButton.setOnClickListener {
             imageView.clearColorFilter()
         }
 
         redGreenColourBlind.setOnClickListener {
-            imageView.setColorFilter(0x79f9f9C4, PorterDuff.Mode.MULTIPLY );
+            imageView.setColorFilter(0x79f9f9C4, PorterDuff.Mode.MULTIPLY);
         }
 
-       blueYellowCB.setOnClickListener{
-           imageView.setColorFilter(Color.argb(80, 125, 125, 125), PorterDuff.Mode.MULTIPLY)
-       }
+        blueYellowCB.setOnClickListener {
+            imageView.setColorFilter(Color.argb(80, 125, 125, 125), PorterDuff.Mode.MULTIPLY)
+        }
 
-        helpButton.setOnClickListener{
+        val extras = intent.extras
+        var user: String? = null
+
+        if (extras != null) {
+            user = extras.getString("user")
+        }
+
+        helpButton.setOnClickListener {
             setContentView(R.layout.popupview)
             val popup_close_btn: Button = findViewById(R.id.popup_close_btn)
-            popup_close_btn.setOnClickListener{
-                val intent = Intent(this, ColourActivity::class.java).apply{}
+            popup_close_btn.setOnClickListener {
+                val intent =
+                    Intent(this, ColourActivity::class.java).apply { putExtra("user", user) }
                 ContextCompat.startActivity(this, intent, null)
             }
         }

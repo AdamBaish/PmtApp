@@ -15,9 +15,16 @@ class ReadActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_read)
 
+        val extras = intent.extras
+        var user: String? = null
+
+        if (extras != null) {
+            user = extras.getString("user")
+        }
+
         val backButtonReadPage: ImageButton = findViewById<ImageButton>(R.id.backButtonReadPage)
         backButtonReadPage.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply{}
+            val intent = Intent(this, MainActivity::class.java).apply{ putExtra("user", user) }
             ContextCompat.startActivity(this, intent, null)
         }
 
@@ -40,7 +47,7 @@ class ReadActivity : AppCompatActivity() {
             setContentView(R.layout.readpopupview)
             val popupbtn: Button = findViewById(R.id.popup_close_btn_read)
             popupbtn.setOnClickListener{
-                val intent = Intent(this, ReadActivity::class.java).apply{}
+                val intent = Intent(this, ReadActivity::class.java).apply{ putExtra("user", user) }
                 ContextCompat.startActivity(this, intent, null)
             }
         }
