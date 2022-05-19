@@ -30,7 +30,7 @@ class ReadActivity : AppCompatActivity() {
                 if (it == TextToSpeech.SUCCESS) {
                     tts.language = Locale.UK
                     tts.setSpeechRate(1.0f)
-                    tts.speak(readText.text.toString(), TextToSpeech.QUEUE_FLUSH, null)
+                    tts.speak(readText.text.toString(), TextToSpeech.QUEUE_FLUSH, null, "")
                 }
             })
         }
