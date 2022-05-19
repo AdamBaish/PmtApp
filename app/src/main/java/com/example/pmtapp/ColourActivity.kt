@@ -15,6 +15,13 @@ class ColourActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_colour)
 
+        val extras = intent.extras
+        var user: String? = null
+
+        if (extras != null) {
+            user = extras.getString("user")
+        }
+
         val backButtonColourPage: ImageButton = findViewById<ImageButton>(R.id.backButtonColourPage)
         val imageView: ImageView = findViewById<ImageView>(R.id.imageView)
         val defaultButton: Button = findViewById<Button>(R.id.default_button)
@@ -23,7 +30,7 @@ class ColourActivity : AppCompatActivity() {
         val helpButton: ImageButton = findViewById(R.id.helpButtonColourPage)
 
         backButtonColourPage.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java).apply {}
+            val intent = Intent(this, MainActivity::class.java).apply { putExtra("user", user) }
             ContextCompat.startActivity(this, intent, null)
         }
 
@@ -37,13 +44,6 @@ class ColourActivity : AppCompatActivity() {
 
         blueYellowCB.setOnClickListener {
             imageView.setColorFilter(Color.argb(80, 125, 125, 125), PorterDuff.Mode.MULTIPLY)
-        }
-
-        val extras = intent.extras
-        var user: String? = null
-
-        if (extras != null) {
-            user = extras.getString("user")
         }
 
         helpButton.setOnClickListener {

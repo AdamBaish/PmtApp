@@ -74,7 +74,7 @@ class TextActivity : AppCompatActivity() {
                 val intent = Intent(this, TextActivity::class.java).apply { putExtra("user", user) }
                 ContextCompat.startActivity(this, intent, null)
             } else {
-                Log.d("TAG", "file not found")
+                Log.d("TAG", "$filePath/$user.txt not found")
             }
         }
 
