@@ -30,9 +30,19 @@ class ReadActivity : AppCompatActivity() {
                 if (it == TextToSpeech.SUCCESS) {
                     tts.language = Locale.UK
                     tts.setSpeechRate(1.0f)
-                    tts.speak(readText.text.toString(), TextToSpeech.QUEUE_FLUSH, null)
+                    tts.speak(readText.text.toString(), TextToSpeech.QUEUE_FLUSH, null, "")
                 }
             })
+        }
+
+        val helpbtn: ImageButton = findViewById(R.id.helpButtonReadPage)
+        helpbtn.setOnClickListener{
+            setContentView(R.layout.readpopupview)
+            val popupbtn: Button = findViewById(R.id.popup_close_btn_read)
+            popupbtn.setOnClickListener{
+                val intent = Intent(this, ReadActivity::class.java).apply{}
+                ContextCompat.startActivity(this, intent, null)
+            }
         }
     }
 
