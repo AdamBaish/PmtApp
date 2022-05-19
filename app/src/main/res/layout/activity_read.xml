@@ -27,6 +27,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="?attr/homeAsUpIndicator" />
 
+    <Button
+        android:id="@+id/readAloudBtn"
+        android:layout_width="273dp"
+        android:layout_height="73dp"
+        android:text="Read Aloud"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/ReadHeader"
         android:layout_width="209dp"
@@ -39,4 +49,19 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/preview_text_read"
+        android:layout_width="309dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="324dp"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:hint="Enter Text to Read Aloud"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
