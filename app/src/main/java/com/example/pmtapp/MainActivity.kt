@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
             if (usersDetails.isEmpty()){return}
             var textSize = usersDetails[3]
             var textSizeFloat : Float = textSize.toFloat()
-            val defultText : TextView = findViewById<TextView>(R.id.preview_text)
-            defultText.textSize = textSizeFloat
+            val defaultText : TextView = findViewById<TextView>(R.id.preview_text)
+            defaultText.textSize = textSizeFloat
         }else{
             Log.d("TAG", "file not found")
         }
