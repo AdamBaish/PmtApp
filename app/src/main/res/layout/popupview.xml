@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="In order to assist with colour impairment this feature provides you with the option of editing the colours on your phone providing you with a better colour experience \n \n \n We reccomend that users take a online colour blindness test for more clarification on what options to chose"
+        android:text="In order to assist with colour impairment this feature provides you with the option of editing the colours on your phone providing you with a better colour experience \n \n \n We recommend that users take a online colour blindness test for more clarification on what options to choose"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

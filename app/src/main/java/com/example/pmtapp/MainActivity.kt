@@ -3,7 +3,6 @@ package com.example.pmtapp
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
@@ -67,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.popupviewhome)
             val closebtn: Button = findViewById(R.id.popup_close_btn_home)
             closebtn.setOnClickListener{
-                val intent =  Intent(this, MainActivity::class.java).apply{}
+                val intent =  Intent(this, MainActivity::class.java).apply{putExtra("user", userName)}
                 ContextCompat.startActivity(this, intent, null)
             }
         }
