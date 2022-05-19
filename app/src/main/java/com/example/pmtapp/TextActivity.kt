@@ -29,10 +29,6 @@ class TextActivity : AppCompatActivity() {
 
             spinner.adapter = adapter
         }
-
-        spinner.onItemSelectedListener{
-
-        }
     }
 
 
